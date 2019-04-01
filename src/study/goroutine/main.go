@@ -1,5 +1,6 @@
 package main
 
+//go语言协程用法
 import (
 	"fmt"
 	"strconv"
