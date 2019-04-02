@@ -24,6 +24,7 @@ func main() {
 	//	fmt.Println("main hello golang:" + strconv.Itoa(i))
 	//	time.Sleep(time.Second)
 	//}
+	//设置所用CPU数量
 	runtime.GOMAXPROCS(1)
 	//fmt.Print(runtime.NumCPU())
 	//for{
