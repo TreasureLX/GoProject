@@ -29,6 +29,22 @@ func main() {
 	intChan <- 20
 	//num4 := <-intChan
 	//fmt.Println(num4)
+	//结构体（struct），接口（interface），分片(slice)
+	//channel关闭后不能再往里面写值了
+	close(intChan)
+	//intChan <- 100
 
-
+	//遍历管道
+	var intChan2 chan int = make(chan int, 100)
+	for i := 1; i <= 100; i++ {
+		intChan2 <- i
+	}
+	for i := 1; i <= 100; i++ {
+		fmt.Println(<-intChan2)
+	}
+	//遍历管道之前先关闭管道
+	close(intChan2)
+	for v := range intChan2 {
+		fmt.Println(v)
+	}
 }
