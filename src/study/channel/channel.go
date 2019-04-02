@@ -29,7 +29,7 @@ func main() {
 	intChan <- 20
 	//num4 := <-intChan
 	//fmt.Println(num4)
-	//结构体（struct），接口（interface），分片(slice)
+	//结构体（struct），接口（interface），分片(slice)，错误处理
 	//channel关闭后不能再往里面写值了
 	close(intChan)
 	//intChan <- 100
