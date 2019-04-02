@@ -7,7 +7,7 @@ import (
 
 func writeData(intChan chan int) {
 	for i := 1; i <= 50; i++ {
-		time.Sleep(time.Second*10)
+		//time.Sleep(time.Second*10)
 		intChan <- i
 		fmt.Printf("写入数据%d\n", i)
 	}
@@ -16,6 +16,7 @@ func writeData(intChan chan int) {
 
 func readData(intChan chan int, exitChan chan bool) {
 	for {
+		time.Sleep(time.Minute)
 		v, ok := <-intChan
 		//fmt.Println(ok)
 		if !ok {
@@ -27,7 +28,7 @@ func readData(intChan chan int, exitChan chan bool) {
 	close(exitChan)
 }
 func main() {
-	intChan := make(chan int, 50)
+	intChan := make(chan int,30)
 	exitChan := make(chan bool, 1)
 
 	go writeData(intChan)

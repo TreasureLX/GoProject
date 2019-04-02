@@ -18,8 +18,9 @@ func main() {
 	//var onlyWriteChan <- chan int
 
 	//2.使用select可以解决从管道读取数据阻塞问题
-	intChan := make(chan int, 10)
+	intChan := make(chan int, 5)
 	for i := 1; i <= 10; i++ {
+		//time.Sleep(time.Minute)
 		intChan <- i
 	}
 
