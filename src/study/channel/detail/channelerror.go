@@ -22,7 +22,7 @@ func test() {
 	myMap[0] = "golang"
 }
 
-func main() {
+func main2() {
 	go test()
 	go sayHello()
 	time.Sleep(time.Minute)

@@ -131,4 +131,6 @@ hs_err_pid*
 # logfile
 data/
 
+.vscode
+
 

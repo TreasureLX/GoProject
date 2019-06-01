@@ -35,7 +35,7 @@ func getPrime(intChan chan int, primeChan chan int, exitChan chan bool) {
 
 }
 
-func main() {
+func main2() {
 	runtime.GOMAXPROCS(runtime.NumCPU() - 1)
 	count := 200000
 	intChan := make(chan int, count)
