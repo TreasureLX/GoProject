@@ -1,12 +1,12 @@
 package main
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
-func main() {
-	var flag bool = false
+func main(){
+	var flag = false
 	start := time.Now().Unix()
 	for i := 1; i <= 200000; i++ {
 		flag = true
@@ -17,7 +17,7 @@ func main() {
 			}
 		}
 		if flag {
-		//	fmt.Println(i)
+			//	fmt.Println(i)
 		}
 
 	}

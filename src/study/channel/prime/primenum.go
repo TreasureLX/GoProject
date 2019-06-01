@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"runtime"
+	"time"
 )
 
 func putNum(intChan chan int, count int) {
@@ -14,7 +14,7 @@ func putNum(intChan chan int, count int) {
 }
 
 func getPrime(intChan chan int, primeChan chan int, exitChan chan bool) {
-	var flag bool = true
+	var flag = true
 	for {
 		num, ok := <-intChan
 		if !ok {
