@@ -23,5 +23,4 @@ func main() {
 	}
 	end := time.Now().Unix()
 	fmt.Printf("耗时%d", end-start)
-
 }
