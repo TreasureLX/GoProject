@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func main(){
+func main() {
 	var flag = false
 	start := time.Now().Unix()
 	for i := 1; i <= 200000; i++ {
